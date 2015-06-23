@@ -1,8 +1,9 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxMidi.h"
 
-class ofApp : public ofBaseApp{
+class ofApp : public ofBaseApp ,public ofxMidiListener{ //Listenerdelegateなので新しいメッッセージを受けれる
 
 	public:
 		void setup();
@@ -18,5 +19,14 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+        void exit();
+    
+        void newMidiMessage(ofxMidiMessage& msg);
+    
+        stringstream text;
+    
+        ofxMidiIn midiIn; //注意！！！　coreMidiFramework を追加する！
+        ofxMidiMessage midiMessage;
+    
 		
 };
