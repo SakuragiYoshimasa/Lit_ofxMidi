@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-               BuildableName = "Lit_ofxMidi.app"
-               BlueprintName = "Lit_ofxMidi"
-               ReferencedContainer = "container:Lit_ofxMidi.xcodeproj">
+               BuildableName = "Lit_ofxmidi.app"
+               BlueprintName = "Lit_ofxmidi"
+               ReferencedContainer = "container:Lit_ofxmidi.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "Lit_ofxMidi.app"
-            BlueprintName = "Lit_ofxMidi"
-            ReferencedContainer = "container:Lit_ofxMidi.xcodeproj">
+            BuildableName = "Lit_ofxmidi.app"
+            BlueprintName = "Lit_ofxmidi"
+            ReferencedContainer = "container:Lit_ofxmidi.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "Lit_ofxMidi.app"
-            BlueprintName = "Lit_ofxMidi"
-            ReferencedContainer = "container:Lit_ofxMidi.xcodeproj">
+            BuildableName = "Lit_ofxmidi.app"
+            BlueprintName = "Lit_ofxmidi"
+            ReferencedContainer = "container:Lit_ofxmidi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "Lit_ofxMidi.app"
-            BlueprintName = "Lit_ofxMidi"
-            ReferencedContainer = "container:Lit_ofxMidi.xcodeproj">
+            BuildableName = "Lit_ofxmidi.app"
+            BlueprintName = "Lit_ofxmidi"
+            ReferencedContainer = "container:Lit_ofxmidi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

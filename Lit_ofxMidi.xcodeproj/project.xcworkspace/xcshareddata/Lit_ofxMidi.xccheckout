@@ -5,9 +5,9 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>CB293867-CADA-48C7-BBF5-1B05119675E5</string>
+	<string>361DB4D7-5E9A-4DC7-910E-63CE58F0E05D</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Lit_ofxMidi</string>
+	<string>Lit_ofxmidi</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>45D0F2F630C878A03A9EFD4716E4D17241CACD83</key>
@@ -16,7 +16,7 @@
 		<string>git://github.com/danomatika/ofxMidi.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Lit_ofxMidi.xcodeproj</string>
+	<string>Lit_ofxmidi.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>45D0F2F630C878A03A9EFD4716E4D17241CACD83</key>
