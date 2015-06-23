@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxMidi.h"
+#include "ofxMidiOutputManager.h"
 
 class ofApp : public ofBaseApp ,public ofxMidiListener{ //Listenerdelegateなので新しいメッッセージを受けれる
 
@@ -23,10 +24,21 @@ class ofApp : public ofBaseApp ,public ofxMidiListener{ //Listenerdelegateなの
     
         void newMidiMessage(ofxMidiMessage& msg);
     
+        void audioRequested (float *buf, int bufSize, int nChan);
         stringstream text;
     
         ofxMidiIn midiIn; //注意！！！　coreMidiFramework を追加する！
         ofxMidiMessage midiMessage;
+        ofxMidiOutputManager manager;
     
+    
+        /*----------------------------------------------------*/
+        //outputExample
+        ofxMidiOut midiOut;
+        int channel;
+        unsigned int currentPgm;
+        int note, velocity;
+        int pan, bend, touch, polytouch;
+        /*----------------------------------------------------*/
 		
 };

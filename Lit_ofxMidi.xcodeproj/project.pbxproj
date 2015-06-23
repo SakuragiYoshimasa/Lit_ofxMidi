@@ -36,6 +36,8 @@
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
 		FA19623D1B3948AF00C63DC7 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AC32CCCB56FAABA3E1BDE0 /* CoreMIDI.framework */; };
 		FA19623E1B3948AF00C63DC7 /* CoreMIDI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81AC32CCCB56FAABA3E1BDE0 /* CoreMIDI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA1FF9191B397BED0004A659 /* ofxMidiOutputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1FF9171B397BED0004A659 /* ofxMidiOutputManager.cpp */; };
+		FA1FF91C1B3984890004A659 /* Note.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA1FF91A1B3984890004A659 /* Note.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,10 @@
 		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
 		F634AA6CA2E3C60F3B87B59A /* ofxRtMidiIn.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxRtMidiIn.cpp; path = ../../../addons/ofxMidi/src/desktop/ofxRtMidiIn.cpp; sourceTree = SOURCE_ROOT; };
+		FA1FF9171B397BED0004A659 /* ofxMidiOutputManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxMidiOutputManager.cpp; sourceTree = "<group>"; };
+		FA1FF9181B397BED0004A659 /* ofxMidiOutputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxMidiOutputManager.h; sourceTree = "<group>"; };
+		FA1FF91A1B3984890004A659 /* Note.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Note.cpp; sourceTree = "<group>"; };
+		FA1FF91B1B3984890004A659 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,7 +276,11 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				FA1FF91A1B3984890004A659 /* Note.cpp */,
+				FA1FF91B1B3984890004A659 /* Note.h */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
+				FA1FF9171B397BED0004A659 /* ofxMidiOutputManager.cpp */,
+				FA1FF9181B397BED0004A659 /* ofxMidiOutputManager.h */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
 			);
@@ -375,6 +385,8 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				FA1FF9191B397BED0004A659 /* ofxMidiOutputManager.cpp in Sources */,
+				FA1FF91C1B3984890004A659 /* Note.cpp in Sources */,
 				BCC8D420CBA9217E437D2D76 /* ofxRtMidiIn.cpp in Sources */,
 				3AEFE4FA8AD5C72671AD07F8 /* ofxRtMidiOut.cpp in Sources */,
 				1A86B7721CAEBC6F1C572C45 /* ofxBaseMidi.cpp in Sources */,
