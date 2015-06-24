@@ -13,8 +13,6 @@ void ofxMidiOutputManager::constructBuffers(float *buffer, int bufferSize){
     //最初bufferの初期化と構築後、willconstructBufferをfalseに
     for(int i = 0; i < bufferSize; i++){
         buffer[2 * i] = 0;
-        buffer[2 * i + 1] = 0;
-   
     }
     
     for(int i = 0; i < 128; i++){
