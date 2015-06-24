@@ -11,12 +11,8 @@ void ofApp::setup(){
     midiIn.listPorts(); //コンソールにポートのリストを表示
     
     midiIn.openPort(1); //ポート番号指定して開く //リストを見て
-    
-    // don't ignore sysex, timing, & active sense messages,
-    // these are ignored by default
     midiIn.ignoreTypes(false, false, false);
     
-    // add ofApp as a listener
     midiIn.addListener(this);  //ofAppをmidiのリスナー登録
     
     // コンソールに表示するかどうか
@@ -27,8 +23,8 @@ void ofApp::setup(){
     manager = ofxMidiOutputManager();
     ofSoundStreamSetup(2, 0, this, 44100, 1024, 4);
     
+    
     /*----------------------------------------------------
-    midiOut = ofxMidiOut();
     //outputExample
     midiOut.openPort(0);
     channel = 1;
@@ -105,12 +101,15 @@ void ofApp::newMidiMessage(ofxMidiMessage& msg) {
     
     // make a copy of the latest message
     midiMessage = msg;
-    //Pitchの所を出力するように
     
+    
+    //Pitchの所を出力するように
     if(midiMessage.getStatusString(midiMessage.status) == "Note On"){
         manager.willConstBuffer(midiMessage.pitch);
     }
 }
+
+
 //-----------
 //出力用
 //波形出力後、次の入力ができるようになれば呼び出される。
@@ -158,6 +157,8 @@ void ofApp::exit() {
     
     midiIn.closePort();
     midiIn.removeListener(this);
+    
+    
     //midiOut.closePort();
 }
 
@@ -177,9 +178,6 @@ void ofApp::keyReleased(int key){
      //manager.wontConstBuffer(note);
      cout << note << "note" << endl;
      }
-    
-     
-     
     switch(key) {
             
             // send pgm change on arrow keys
