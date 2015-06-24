@@ -32,13 +32,13 @@ class ofApp : public ofBaseApp ,public ofxMidiListener{ //Listenerdelegateなの
         ofxMidiOutputManager manager;
     
 
-        /*----------------------------------------------------*/
+        /*----------------------------------------------------
         //outputExample
         ofxMidiOut midiOut;
         int channel;
         unsigned int currentPgm;
         int note, velocity;
         int pan, bend, touch, polytouch;
-        /*----------------------------------------------------*/
+        ----------------------------------------------------*/
 		
 };

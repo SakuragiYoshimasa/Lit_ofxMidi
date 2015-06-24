@@ -21,7 +21,7 @@ private:
 public:
     ofxMidiOutputManager(){
         for(int i = 0; i < 128; i++){
-            notes[i] = Note();
+            notes[i] = *new Note();
             notes[i].init(10.0 * i, 0.5); //imprement
         }
     }
