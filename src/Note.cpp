@@ -8,12 +8,12 @@
 
 #include "Note.h"
 
-void Note::init(float freq, float amp){
+void Note::init(float midiNoteNumber, float amp){
     
     phase = 0;
-    frequency = freq;
+    frequency = 440 * pow(2, (midiNoteNumber - 69) / 12.0);
     ampritude = amp;
-    phasePerSample = TWO_PI * freq / 44100;
+    phasePerSample = TWO_PI * frequency / 44100;
     willConstructBuffer = false;
     attenuation = 0.0;
 

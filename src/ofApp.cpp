@@ -158,6 +158,7 @@ void ofApp::exit() {
     
     midiIn.closePort();
     midiIn.removeListener(this);
+    //midiOut.closePort();
 }
 
 
