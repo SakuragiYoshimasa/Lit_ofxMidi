@@ -28,12 +28,12 @@ void Note::constructBuffer(float *buffer, int bufferSize){
         {
             phase -= TWO_PI;
         }
-        float value = ampritude * sin(phase);
+        float value = ampritude * sin(phase) * exp(attenuation);
     
         buffer[i * 2    ] += value;
         buffer[i * 2 + 1] += value;
     }
-    attenuation -= 1;
+    attenuation -= 0.1;
     
     if(attenuation < -10.0){
         willConstructBuffer = false;

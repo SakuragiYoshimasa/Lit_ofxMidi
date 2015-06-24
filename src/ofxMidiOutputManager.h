@@ -22,7 +22,7 @@ public:
     ofxMidiOutputManager(){
         for(int i = 0; i < 128; i++){
             notes[i] = *new Note();
-            notes[i].init(10.0 * i, 0.5); //imprement
+            notes[i].init(15.0 * i, 0.5); //imprement
         }
     }
     ~ofxMidiOutputManager(){}
