@@ -10,7 +10,7 @@ void ofApp::setup(){
     
     midiIn.listPorts(); //コンソールにポートのリストを表示
     
-    midiIn.openPort(0); //ポート番号指定して開く //リストを見て
+    midiIn.openPort(1); //ポート番号指定して開く //リストを見て
     
     // don't ignore sysex, timing, & active sense messages,
     // these are ignored by default
@@ -105,7 +105,11 @@ void ofApp::newMidiMessage(ofxMidiMessage& msg) {
     // make a copy of the latest message
     midiMessage = msg;
     //Pitchの所を出力するように
-    //manager.willConstBuffer(midiMessage.pitch);
+    if(ofxMidiMessage::getStatusString(midiMessage.status) == "Note On"){
+        manager.willConstBuffer(midiMessage.pitch);
+    }else{
+        manager.wontConstBuffer(midiMessage.pitch);
+    }
 }
 //-----------
 //出力用
@@ -154,6 +158,9 @@ void ofApp::exit() {
     
     midiIn.closePort();
     midiIn.removeListener(this);
+    // clean up
+    midiOut.closePort();
+   
 }
 
 
@@ -287,6 +294,7 @@ void ofApp::keyReleased(int key){
     /*----------------------------------------------------*/
     
 }
+
 
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y ){
