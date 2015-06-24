@@ -15,7 +15,13 @@ class Note {
     private:
         float frequency, ampritude;
         float phase , phasePerSample;
+        float attenuation; //減衰率
+         bool willConstructBuffer;
+    
     public:
+    
         void init(float freq,float amp);  //周波数と振幅で初期化
-        void constructBuffer(float *buffer , int bufferSize , bool overLay);
+        void constructBuffer(float *buffer , int bufferSize);
+        void willConstruntBuffer();
+        bool getWillConBuf();
 };

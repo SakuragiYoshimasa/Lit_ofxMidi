@@ -31,7 +31,7 @@ class ofApp : public ofBaseApp ,public ofxMidiListener{ //Listenerdelegateなの
         ofxMidiMessage midiMessage;
         ofxMidiOutputManager manager;
     
-    
+
         /*----------------------------------------------------*/
         //outputExample
         ofxMidiOut midiOut;

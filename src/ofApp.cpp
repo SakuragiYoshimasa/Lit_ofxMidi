@@ -10,7 +10,7 @@ void ofApp::setup(){
     
     midiIn.listPorts(); //コンソールにポートのリストを表示
     
-    midiIn.openPort(0); //ポート番号指定して開く //リストを見て
+    midiIn.openPort(1); //ポート番号指定して開く //リストを見て
     
     // don't ignore sysex, timing, & active sense messages,
     // these are ignored by default
@@ -28,6 +28,7 @@ void ofApp::setup(){
     ofSoundStreamSetup(2, 0, this, 44100, 1024, 4);
     
     /*----------------------------------------------------*/
+    midiOut = ofxMidiOut();
     //outputExample
     midiOut.openPort(0);
     channel = 1;
@@ -105,7 +106,10 @@ void ofApp::newMidiMessage(ofxMidiMessage& msg) {
     // make a copy of the latest message
     midiMessage = msg;
     //Pitchの所を出力するように
-    //manager.willConstBuffer(midiMessage.pitch);
+    
+    if(midiMessage.getStatusString(midiMessage.status) == "Note On"){
+        manager.willConstBuffer(midiMessage.pitch);
+    }
 }
 //-----------
 //出力用
@@ -139,7 +143,7 @@ void ofApp::keyPressed(int key){
         note = ofMap(key, 48, 122, 0, 127);
         velocity = 64;
         midiOut.sendNoteOn(channel, note,  velocity);
-        manager.willConstBuffer(note);
+        //manager.willConstBuffer(note);
         cout << note << "note" << endl;
     }
     
@@ -160,16 +164,21 @@ void ofApp::exit() {
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
     
-    if(isalnum((unsigned char) key)) {
-        
-        // scale the ascii values to midi velocity range 0-127
-        // see an ascii table: http://www.asciitable.com/
-        note = ofMap(key, 48, 122, 0, 127);
-        manager.wontConstBuffer(note);
-        cout << note << "note" << endl;
-    }
+
     /*----------------------------------------------------*/
     //outpuExample
+     
+     if(isalnum((unsigned char) key)) {
+     
+     // scale the ascii values to midi velocity range 0-127
+     // see an ascii table: http://www.asciitable.com/
+     note = ofMap(key, 48, 122, 0, 127);
+     //manager.wontConstBuffer(note);
+     cout << note << "note" << endl;
+     }
+    
+     
+     
     switch(key) {
             
             // send pgm change on arrow keys

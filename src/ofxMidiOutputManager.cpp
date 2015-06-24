@@ -12,26 +12,24 @@ void ofxMidiOutputManager::constructBuffers(float *buffer, int bufferSize){
     //各音に対しBuffer構築処理
     //最初bufferの初期化と構築後、willconstructBufferをfalseに
     for(int i = 0; i < bufferSize; i++){
-        buffer[i] = 0;
+        buffer[2 * i] = 0;
+        buffer[2 * i + 1] = 0;
+   
     }
     
     for(int i = 0; i < 128; i++){
-        if(willConstructBuffer[i]){
-            notes[i].constructBuffer(buffer, bufferSize, true);
+        if(notes[i].getWillConBuf()){
+            notes[i].constructBuffer(buffer, bufferSize);
         }
     }
 }
 
 void ofxMidiOutputManager::willConstBuffer(int index){
     
-    willConstructBuffer[index] = true;
+    notes[index].willConstruntBuffer();
     cout << "index" << index << "will" << endl;;
 
 }
 
-void ofxMidiOutputManager::wontConstBuffer(int index){
-    willConstructBuffer[index] = false;
-        cout << "index" << index << "wont" << endl;;
 
-}
 
